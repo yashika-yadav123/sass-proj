@@ -1,0 +1,420 @@
+@import"style.css";
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'jost';
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+
+}
+
+@mixin button {
+    background: #8eddea;
+    border: none;
+    height: 35px;
+    width: 127px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px aqua;
+
+    a {
+        color: gray;
+        align-items: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+    }
+}
+
+//  navigation bar
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+    background: #fff;
+
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        width: 500px;
+    }
+
+    li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        height: 70px;
+        box-shadow: 0 0 20px aqua;
+
+    }
+
+    .icon {
+        font-size: 1.5rem;
+    }
+}
+
+// header section
+#header {
+    min-height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(198, 239, 239);
+
+    .social {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        li {
+            list-style: none;
+
+            a {
+                color: black;
+            }
+        }
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right: 50px;
+
+        .text-container {
+            width: 500px;
+
+            .text {
+                h1 {
+                    font-size: 3.6rem;
+                    font-weight: 700;
+                    font-family: 'jost';
+                }
+
+                h3 {
+                    font-size: 1.3rem;
+                    color: rgb(67, 66, 66);
+                    font-weight: 600;
+                    font-family: 'jost';
+                }
+
+                p {
+                    color: rgb(155, 153, 153);
+                    font-family: 'jost';
+                    font-weight: 600;
+                    line-height: 35px;
+                }
+            }
+        }
+
+        .contact-btn {
+            @include button();
+
+        }
+    }
+}
+
+// about me
+#about-me {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(198, 239, 239);
+
+    .heading {
+        text-align: center;
+        padding: 45px;
+        justify-content: center;
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: gray;
+        }
+    }
+
+    .about-me-container {
+        display: flex;
+    }
+
+    .box1 {
+        border-radius: 662px 260px 863px 194px;
+        height: 365px;
+        width: 1125px;
+        background-color: #8eddea;
+        border: 1px solid #8eddea;
+        margin-left: 28px;
+        margin-top: 28px;
+        margin-bottom: 80px;
+        box-shadow: 0 0 20px aqua;
+    }
+
+    .about-me-text {
+        padding-top: 70px;
+        padding-left: 53px;
+
+
+
+        .intro {
+            font-size: 1.1rem;
+            color: gray;
+
+        }
+    }
+
+
+    .skills {
+        @extend .intro;
+        padding-top: 35px;
+        display: flex;
+        justify-content: space-around;
+
+        // align-items: center;
+        .skill {
+            list-style: none;
+            line-height: 55px;
+            
+            .s {
+                width: 170px;
+                background-color: black;
+                box-shadow: 0 0 20px aqua;
+            }
+
+            .span {
+                width: var(--percent);
+                height: 10px;
+                background-color: var(--color);   
+            }
+        }
+    }
+
+}
+
+// portfolio
+#portfolio {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background-color: rgb(198, 239, 239);
+    @extend .heading;
+
+    h3 {
+        color: gray;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .container {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+
+        .project {
+            width: 500px;
+            line-height: 27px;
+
+            img {
+                width: 450px;
+                height: 300px;
+                border-radius: 30px;
+                box-shadow: 0 0 20px aqua;
+            }
+
+            .text {
+
+                h1 {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    color: gray;
+                }
+
+                button {
+                    @include button();
+                }
+            }
+        }
+    }
+}
+
+// contact
+#contact {
+    min-height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(198, 239, 239);
+    @extend .heading;
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: gray;
+    }
+
+    .container {
+        padding: 75px 75px;
+
+        // form
+        .input {
+            display: flex;
+            gap: 20px;
+
+            input {
+                width: 320px;
+                height: 50px;
+                padding-left: 30px;
+                background-color: rgb(134, 230, 230);
+                border: 1px solid transparent;
+                border-radius: 10px;
+                font-family: 'jost';
+                font-size: 1.1rem;
+                box-shadow: 0 0 20px aqua;
+            }
+        }
+
+        .Email {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                width: 665px;
+                height: 50px;
+                padding-left: 30px;
+                background-color: rgb(115, 226, 226);
+                border: 1px solid transparent;
+                border-radius: 10px;
+                font-family: 'jost';
+                font-size: 1.1rem;
+                box-shadow: 0 0 20px aqua;
+            }
+
+            textarea {
+                height: 200px;
+                width: 665px;
+                padding-left: 30px;
+                padding-top: 30px;
+                background-color: rgb(115, 226, 226);
+                border: 1px solid transparent;
+                border-radius: 10px;
+                font-family: 'jost';
+                font-size: 1.1rem;
+                box-shadow: 0 0 20px aqua;
+            }
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            margin-left: 200px;
+            cursor: pointer;
+            background-color: rgb(5, 226, 226);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            box-shadow: 0 0 20px aqua;
+
+            a {
+                text-decoration: none;
+                font-size: 1.1rem;
+                font-family: 'jost';
+                color: gray;
+            }
+        }
+    }
+}
+
+// footer section
+#footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(18, 204, 204);
+    box-shadow: 0 0 20px rgb(1, 67, 67);
+
+    .container {
+        padding: 10px 60px;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            width: 500px;
+
+            li a {
+                text-decoration: none;
+                color: #000;
+                font-weight: 600;
+            }
+        }
+
+        h2 {
+            margin-left: 95px;
+        }
+    }
+}
+
+@media (max-width:650px) {
+    nav {
+        max-width: 50%;
+    }
+
+    #header {
+        max-width: 60%;
+
+        p {
+            z-index: 30%;
+            max-zoom: 20%;
+        }
+    }
+
+    .img {
+        max-width: fit-content;
+    }
+
+    #About-me {
+        max-width: 70%;
+    }
+
+    .span {
+        max-width: 50%;
+    }
+
+    #portfolio {
+        max-width: 80%;
+    }
+
+    #contact {
+        max-width: 60%;
+    }
+
+    #footer {
+        max-width: 70%;
+    }
+}

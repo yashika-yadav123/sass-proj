@@ -1,0 +1,352 @@
+@import "style.css";
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "jost";
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px;
+  background: #fff;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 500px;
+}
+nav li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  height: 70px;
+  box-shadow: 0 0 20px aqua;
+}
+nav .icon {
+  font-size: 1.5rem;
+}
+
+#header {
+  min-height: 85vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(198, 239, 239);
+}
+#header .social {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#header .social li {
+  list-style: none;
+}
+#header .social li a {
+  color: black;
+}
+#header .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-right: 50px;
+}
+#header .container .text-container {
+  width: 500px;
+}
+#header .container .text-container .text h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  font-family: "jost";
+}
+#header .container .text-container .text h3 {
+  font-size: 1.3rem;
+  color: rgb(67, 66, 66);
+  font-weight: 600;
+  font-family: "jost";
+}
+#header .container .text-container .text p {
+  color: rgb(155, 153, 153);
+  font-family: "jost";
+  font-weight: 600;
+  line-height: 35px;
+}
+#header .container .contact-btn {
+  background: #8eddea;
+  border: none;
+  height: 35px;
+  width: 127px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px aqua;
+}
+#header .container .contact-btn a {
+  color: gray;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#about-me {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(198, 239, 239);
+}
+#about-me .heading, #about-me #contact, #about-me #portfolio {
+  text-align: center;
+  padding: 45px;
+  justify-content: center;
+}
+#about-me .heading h1, #about-me #contact h1, #about-me #portfolio h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+#about-me .heading h3, #about-me #contact h3, #about-me #portfolio h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: gray;
+}
+#about-me .about-me-container {
+  display: flex;
+}
+#about-me .box1 {
+  border-radius: 662px 260px 863px 194px;
+  height: 365px;
+  width: 1125px;
+  background-color: #8eddea;
+  border: 1px solid #8eddea;
+  margin-left: 28px;
+  margin-top: 28px;
+  margin-bottom: 80px;
+  box-shadow: 0 0 20px aqua;
+}
+#about-me .about-me-text {
+  padding-top: 70px;
+  padding-left: 53px;
+}
+#about-me .about-me-text .intro, #about-me .about-me-text .skills {
+  font-size: 1.1rem;
+  color: gray;
+}
+#about-me .skills {
+  padding-top: 35px;
+  display: flex;
+  justify-content: space-around;
+}
+#about-me .skills .skill {
+  list-style: none;
+  line-height: 55px;
+}
+#about-me .skills .skill .s {
+  width: 170px;
+  background-color: black;
+  box-shadow: 0 0 20px aqua;
+}
+#about-me .skills .skill .span {
+  width: var(--percent);
+  height: 10px;
+  background-color: var(--color);
+}
+
+#portfolio {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  background-color: rgb(198, 239, 239);
+}
+#portfolio h3 {
+  color: gray;
+  font-size: 1rem;
+  font-weight: 500;
+}
+#portfolio .container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+#portfolio .container .project {
+  width: 500px;
+  line-height: 27px;
+}
+#portfolio .container .project img {
+  width: 450px;
+  height: 300px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px aqua;
+}
+#portfolio .container .project .text h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+#portfolio .container .project .text p {
+  font-size: 0.9rem;
+  color: gray;
+}
+#portfolio .container .project .text button {
+  background: #8eddea;
+  border: none;
+  height: 35px;
+  width: 127px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px aqua;
+}
+#portfolio .container .project .text button a {
+  color: gray;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#contact {
+  min-height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(198, 239, 239);
+}
+#contact h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: gray;
+}
+#contact .container {
+  padding: 75px 75px;
+}
+#contact .container .input {
+  display: flex;
+  gap: 20px;
+}
+#contact .container .input input {
+  width: 320px;
+  height: 50px;
+  padding-left: 30px;
+  background-color: rgb(134, 230, 230);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: "jost";
+  font-size: 1.1rem;
+  box-shadow: 0 0 20px aqua;
+}
+#contact .container .Email {
+  display: flex;
+  flex-direction: column;
+}
+#contact .container .Email input {
+  width: 665px;
+  height: 50px;
+  padding-left: 30px;
+  background-color: rgb(115, 226, 226);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: "jost";
+  font-size: 1.1rem;
+  box-shadow: 0 0 20px aqua;
+}
+#contact .container .Email textarea {
+  height: 200px;
+  width: 665px;
+  padding-left: 30px;
+  padding-top: 30px;
+  background-color: rgb(115, 226, 226);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: "jost";
+  font-size: 1.1rem;
+  box-shadow: 0 0 20px aqua;
+}
+#contact .container button {
+  width: 200px;
+  height: 50px;
+  margin-left: 200px;
+  cursor: pointer;
+  background-color: rgb(5, 226, 226);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 20px aqua;
+}
+#contact .container button a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: "jost";
+  color: gray;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(18, 204, 204);
+  box-shadow: 0 0 20px rgb(1, 67, 67);
+}
+#footer .container {
+  padding: 10px 60px;
+}
+#footer .container ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 500px;
+}
+#footer .container ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+#footer .container h2 {
+  margin-left: 95px;
+}
+
+@media (max-width: 650px) {
+  nav {
+    max-width: 50%;
+  }
+  #header {
+    max-width: 60%;
+  }
+  #header p {
+    z-index: 30%;
+    max-zoom: 20%;
+  }
+  .img {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+  #About-me {
+    max-width: 70%;
+  }
+  .span {
+    max-width: 50%;
+  }
+  #portfolio {
+    max-width: 80%;
+  }
+  #contact {
+    max-width: 60%;
+  }
+  #footer {
+    max-width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */
